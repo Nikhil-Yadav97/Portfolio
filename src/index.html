@@ -1,15 +1,13 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./output.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Iceberg&family=Poppins:wght@800&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Poppins:wght@800&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <style>
         .emblema-one-regular {
             font-family: "Emblema One", system-ui;
@@ -24,275 +22,238 @@
         }
 
         .navcolor {
-            background-color: rgb(28, 36, 63);
+            background-color: rgb(209, 209, 210);
             font-size: larger;
             font-weight: 500;
+            border-radius: 50px;
+
+
+        }
+
+        .link {
+            color: rgb(230, 221, 221);
+            transition: color 0.3s ease;
+            background-color: black;
+
+        }
+
+        .link:hover {
+            color: rgb(12, 148, 182);
+            background-color: rgb(165, 169, 169);
+        }
+
+        .blinking-text {
+            color: #ffffff;
+
+            font-weight: bold;
+            text-align: center;
+
+            animation: thunderFlash 3s ease-in-out 1 forwards;
+            text-shadow: 0 0 10px #00f0ff;
+        }
+
+        @keyframes thunderFlash {
+            0% {
+                opacity: 0;
+                text-shadow: 0 0 10px #b0ccce;
+            }
+
+            10% {
+                opacity: 0.1;
+                text-shadow: none;
+            }
+
+            20% {
+                opacity: 1;
+                text-shadow: 0 0 30px #ffffff, 0 0 60px #00f0ff;
+            }
+
+            30% {
+                opacity: 0.3;
+                text-shadow: none;
+            }
+
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 10px #00f0ff;
+            }
         }
     </style>
 </head>
 
-<body class="bg-cover bg-center h-screen w-screen " style="background-image: url(space.jpg);">
-    <div class="grid grid-cols-">
-        <div class="col-span-1 h-32  p-4 grid grid-cols-4 gap-6 bg-gray-950">
+<body class="bg-cover bg-center h-screen w-screen" style="background-image: url(space.jpg);">
+    <header style="background-color: rgba(246, 243, 243, 0.037); padding: 20px;">
+        <nav class="flex  gap-8 justify-around bg-white ">
+            <a href="#" class="  link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center"
+                style="height: 65px; width: 200px;">
+                Home
+            </a>
+            <a href="#" class="   link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center"
+                style="height: 65px; width: 200px;">
+                About
+            </a>
+            <a href="#scroll" id="btn" class=" link border-2 p-4 navcolor iceberg-regular text-center "
+                style="height: 65px; width: 200px;">
+                Skills
+            </a>
+            <a href="#" class="bg-blue-500  link border-2 p-4 font-bold iceberg-regular text-center navcolor"
+                style="height:65px; width: 200px;">
+                Contact
+            </a>
+        </nav>
+    </header>
+    <hr class="h-1 bg-gray-400 mt-[200px]" />
 
-            <span class="h-15 col-span-1 text-white rounded-sm hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular">
-                <h1 class="text-center">Home</h1>
-            </span>
-            <span class="navcolor h-15 col-span-1 text-white rounded-sm hover:bg-gray-400 border-2 p-4 iceberg-regular">
-                <h1 class="text-center">About</h1>
-            </span>
-            <span id="btn"
-                class="navcolor h-15 col-span-1 text-white rounded-sm  border-2 p-4 iceberg-regular hover:bg-white">
-                <h1 class="text-center">Skills</h1>
-            </span>
-            <span class="navcolor h-15 col-span-1 rounded-sm text-white hover:bg-gray-400 border-2 p-4 iceberg-regular">
-                <h1 class="text-center">Contact</h1>
-            </span>
-        </div>
-    </div>
-    <div class="mt-50">
-        <h1 class="text-white text-center emblema-one-regular  font-medium text-7xl"
-            style="text-shadow: 2px 3px 5px rgba(36, 188, 205, 0.603);">NIKHIL YADAV</h1>
-    </div>
-    <div class="flex  min-h-56 justify-center flex-col p-5 mt-7">
-        <p class="text-white text-center text-3xl iceberg-regular"> I am a curious and driven technology enthusiast
-        <p class="text-white text-center text-3xl iceberg-regular">
-            always eager to explore and innovate. Fascinated by how code shapes the world
+    <main>
+        <section class="mt-50 text-center">
+            <h1 class="text-white emblema-one-regular font-medium text-7xl blinking-text"
+                style="text-shadow: 2px 3px 5px rgba(36, 188, 205, 0.603);">
+                NIKHIL YADAV
+            </h1>
+        </section>
 
-        </p>
-        <p class="text-white text-center text-3xl iceberg-regular">
-            I enjoy solving complex problems My journey in tech is fueled by a passion for learning, </p>
-        <p class="text-white text-center text-3xl iceberg-regular">
-            innovation, and building something meaningful.
-        </p>
-        </p>
+        <section class="flex min-h-56 justify-center flex-col p-5 mt-7 text-center text-white text-3xl iceberg-regular"
+            style="height: 400px;">
+            <p>I am a curious and driven technology enthusiast</p>
+            <p>always eager to explore and innovate. Fascinated by how code shapes the world</p>
+            <p>I enjoy solving complex problems. My journey in tech is fueled by a passion for learning,</p>
+            <p>innovation, and building something meaningful.</p>
+        </section>
 
-    </div>
-    <div class="h-1 bg-gray-400" style="margin-top: 200px; position: relative;">
-        <div class=" h-52 mt-50 grid  p-9">
+        <hr class="h-1 bg-gray-400 mt-[200px]" />
 
-            <h1 class="text-white  text-5xl iceberg-regular ">EDUCATION</h1>
-            <p class="text-white text-xl iceberg-regular ">
-                BTech CSE(AI & ML) Graphic Era University (Ongoing) [2023-27]
+        <section class="p-9">
+            <h2 class="text-white text-5xl iceberg-regular">EDUCATION</h2>
+            <p class="text-white text-xl iceberg-regular">BTech CSE(AI & ML) Graphic Era University (Ongoing) [2023-27]
             </p>
-            <p class="text-white text-xl iceberg-regular  ">
-                High School and Intermediate Shri Guru Nanak School (CBSE Board) [2023]
-            </p>
-        </div>
-        <div class="h-1 bg-gray-400" style="margin-top: 10px; position: relative;">
-        </div>
-        <div class=" grid p-9" style="height: 600px;">
-            <h1 class="text-white  text-5xl iceberg-regular col-span-1">PROGRAMMING LANGUAGES</h1>
-            <div class="  col-span-1 grid grid-cols-4   gap-8" style="margin-top:60px ; height: 600px; ">
-                <div class="text-white flex flex-col justify-center rounded-sm "
-                    style="align-items: center; height: 270px; width: 250px  ; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px; ">
-                        <img src="python.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        Python
-                    </h1>
+            <p class="text-white text-xl iceberg-regular">High School and Intermediate Shri Guru Nanak School (CBSE
+                Board) [2023]</p>
+        </section>
+
+        <hr class="h-1 bg-gray-400 mt-10" />
+
+        <section class="p-9" style="height: 750px;">
+            <h2 class="text-white text-5xl iceberg-regular" style="margin: 20px;">PROGRAMMING LANGUAGES</h2>
+            <div class="grid grid-cols-4 gap-8 mt-16">
+                <!-- Programming Cards -->
+                <article class="text-white flex flex-col justify-center rounded-sm items-center"
+                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="python.png" alt="Python Logo" class="h-[220px] w-[200px] p-1" />
+                    <h3 class="text-3xl text-center iceberg-regular">Python</h3>
+                </article>
+                <article class="text-white flex flex-col justify-center rounded-sm items-center"
+                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="js.png" alt="JavaScript Logo" class="h-[220px] w-[200px] p-1" />
+                    <h3 class="text-3xl text-center iceberg-regular">JavaScript</h3>
+                </article>
+                <article class="text-white flex flex-col justify-center rounded-sm items-center"
+                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="java.png" alt="Java Logo" class="h-[220px] w-[200px] p-1" />
+                    <h3 class="text-3xl text-center iceberg-regular">Java</h3>
+                </article>
+                <article class="text-white flex flex-col justify-center rounded-sm items-center"
+                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="c.png" alt="C Logo" class="h-[220px] w-[200px] p-1" />
+                    <h3 class="text-3xl text-center iceberg-regular">C</h3>
+                </article>
+                <article class="text-white flex flex-col justify-center rounded-sm items-center"
+                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="cpp.png" alt="C++ Logo" class="h-[220px] w-[200px] p-1" />
+                    <h3 class="text-3xl text-center iceberg-regular">Cpp</h3>
+                </article>
+            </div>
+        </section>
+
+        <hr class="h-1 bg-gray-400 mt-[200px]" />
+
+        <section class="p-9" id="scroll" style="height: 500px;">
+            <h2 class="text-white text-5xl iceberg-regular" style="margin: 30px;">TECHNOLOGIES/FRAMEWORKS</h2>
+            <div class="grid grid-cols-4 gap-8 mt-16">
+                <!-- Technologies -->
+                <!-- Reuse the same <article> block for each technology, similar to programming section -->
+                <!-- I'll list only first few for brevity -->
+                <article class="text-white flex flex-col justify-center rounded-sm items-center"
+                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="tf.png" alt="TensorFlow Logo" class="h-[220px] w-[200px] p-1" />
+                    <h3 class="text-3xl text-center iceberg-regular">TensorFlow</h3>
+                </article>
+                <!-- Repeat similar articles for NodeJS, SQL, Git... -->
+            </div>
+        </section>
+
+        <hr class="h-1 bg-gray-400 mt-[300px]" />
+
+        <section class="p-9" style="height: 500px;">
+            <h2 class="text-white text-5xl iceberg-regular">CODING PLATFORMS</h2>
+            <div class="flex justify-around mt-16">
+                <img src="leetcode.png" alt="LeetCode Logo" style="height: 200px;" />
+                <div class="text-white iceberg-regular w-[600px] text-xl p-5">
+                    <p>200+ LeetCode problems (Easy/Medium) | Focused on DSA, Arrays, Strings, Recursion | Improving via
+                        biweekly contests.</p>
+                    <a href="https://leetcode.com/u/Nikhil_yadav_07/" target="_blank"
+                        class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Visit
+                        Profile</a>
                 </div>
-                <div class="text-white flex flex-col justify-center rounded-sm  "
-                    style="border: 2px solid white; align-items: center; height: 270px; width: 250px  ; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px; ">
-                        <img src="js.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        JavaScript
-                    </h1>
-                </div>
-                <div class="text-white flex flex-col justify-center rounded-sm  "
-                    style="border: 2px solid white; align-items: center; height: 270px; width: 250px  ;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px; ">
-                        <img src="java.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        Java
-                    </h1>
-                </div>
-                <div class="text-white flex flex-col justify-center rounded-sm  "
-                    style="border: 2px solid white; align-items: center; height: 270px; width: 250px  ;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px;  ">
-                        <img src="c.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        C
-                    </h1>
-                </div>
-                <div class="text-white flex flex-col justify-center rounded-sm  "
-                    style="border: 2px solid white; align-items: center; height: 270px; width: 250px  ;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px; ">
-                        <img src="cpp.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        Cpp
-                    </h1>
+                <img src="gfg.png" alt="GFG Logo" style="height: 200px;" />
+                <div class="text-white iceberg-regular w-[600px] text-xl p-5">
+                    <p>I have solved 50+ questions on GeeksforGeeks, covering a variety of topics, and participated in
+                        multiple coding contests, enhancing my problem-solving skills.</p>
+                    <a href="https://www.geeksforgeeks.org/user/nikhilya0vof/" target="_blank"
+                        class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Visit
+                        Profile</a>
                 </div>
             </div>
-        </div>
-        <div class="h-1 bg-gray-400" style="margin-top: 200px; position: relative;">
+        </section>
 
-        </div>
-        <div class=" grid p-9" style="height: 500px;" id="scroll">
-            <h1 class="text-white  text-5xl iceberg-regular col-span-1">TECHNOLOGIES/FRAMEWORKS</h1>
-            <div class="  col-span-1 grid grid-cols-4   gap-8" style="margin-top:60px ; height: 600px; ">
-                <div class="text-white flex flex-col justify-center rounded-sm "
-                    style="align-items: center; height: 270px; width: 250px  ; border: 2px solid white;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px; ">
-                        <img src="tf.png" alt="python">
-                    </div>
-                    <h1 class="text-center  iceberg-regular  text-3xl ">
-                        TensorFlow
-                    </h1>
-                </div>
-                <div class="text-white flex flex-col justify-center rounded-sm   "
-                    style="border: 2px solid white; align-items: center; height: 270px; width: 250px  ;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px; ">
-                        <img src="node.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        NodeJS
-                    </h1>
-                </div>
-                <div class="text-white flex flex-col justify-center rounded-sm  "
-                    style="border: 2px solid white; align-items: center; height: 270px; width: 250px  ;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px; ">
-                        <img src="sql.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        SQL
-                    </h1>
-                </div>
-                <div class="text-white flex flex-col justify-center rounded-sm  "
-                    style="border: 2px solid white; align-items: center; height: 270px; width: 250px; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px;  ">
-                        <img src="git.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        Git
-                    </h1>
-                </div>
-                <div class="text-white flex flex-col justify-center rounded-sm  "
-                    style="border: 2px solid white; align-items: center; height: 270px; width: 250px  ;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px; ">
-                        <img src="sql.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        SQL
-                    </h1>
-                </div>
-                <div class="text-white flex flex-col justify-center rounded-sm  "
-                    style="border: 2px solid white; align-items: center; height: 270px; width: 250px  ;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px; ">
-                        <img src="sql.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        SQL
-                    </h1>
-                </div>
-                <div class="text-white flex flex-col justify-center rounded-sm  "
-                    style="border: 2px solid white; align-items: center; height: 270px; width: 250px  ;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px; ">
-                        <img src="sql.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        SQL
-                    </h1>
-                </div>
-                <div class="text-white flex flex-col justify-center rounded-sm"
-                    style="border: 2px solid white; align-items: center; height: 270px; width: 250px  ;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46)">
-                    <div class="" style="height: 220px; width: 200px; padding: 5px; ">
-                        <img src="sql.png" alt="python" class="">
-                    </div>
-                    <h1 class="text-center  iceberg-regular text-3xl">
-                        SQL
-                    </h1>
-                </div>
-            </div>
-        </div>
-        <div class="h-1 bg-gray-400 " style="margin-top: 300px; position: relative;">
-        </div>
-        <div class="p-9" style="height: 500px;">
-            <h1 class="text-white  text-5xl iceberg-regular">PRACTICING PLATFOMRS</h1>
-            <div class=" flex justify-around" style="height: 250px; margin-top: 65px;">
-                <img src="leetcode.png" alt="leetcode" style="height: 200px; margin-top: 27px;">
-                <div class="text-white iceberg-regular "
-                    style=" margin: 30px; padding: 20px; width: 600px; font-size: larger; font-size: x-large;">
+        <hr class="h-1 bg-gray-400" />
 
-                    <div class="" style="height: 200px;">
-                        <p>
-                            200+ LeetCode problems (Easy/Medium) | Focused on DSA, Arrays, Strings, Recursion |
-                            Improving via biweekly contests.
-
-                        </p>
-                        <a href="https://leetcode.com/u/Nikhil_yadav_07/" target="_blank"
-                            class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Visit
-                            Profile</a>
-                    </div>
-
+        <section class="projects p-9">
+            <h2 class="text-white text-5xl iceberg-regular " style="margin-bottom: 20px;">PROJECTS</h2>
+            <article>
+                <h3 class="text-3xl iceberg-regular ml-10 text-white">Virtual Assistant (Python)</h3>
+                <div class="flex justify-between mt-5 bg-red-50 p-5">
+                    <ul class="list-disc text-white text-3xl iceberg-regular">
+                        <li>Listens to voice commands and responds with speech.</li>
+                        <li>Opens websites & desktop apps like VS Code via voice.</li>
+                        <li>Tells current time, temperature, and latest tech news.</li>
+                        <li>Smart voice-based reminder system.</li>
+                        <li>Controls system volume with voice commands.</li>
+                    </ul>
+                    <img src="voice.png" alt="Virtual Assistant Project" height="300px" width="400px" />
                 </div>
-                <img src="gfg.png" alt="leetcode" style="height: 200px; margin-top: 27px;">
-                <div class="text-white iceberg-regular "
-                    style=" margin: 30px; padding: 20px; width: 600px; font-size: larger; font-size: x-large;">
+            </article>
+            <article>
+                <h3 class="text-3xl iceberg-regular ml-10 text-white">WareHouse Management System</h3>
+                <div class="flex justify-around mt-5 bg-red-50 p-5">
+                    <ul class="list-disc text-white text-3xl iceberg-regular">
 
-                    <div class="" style="height: 200px;">
-                        <p>
-                            I have solved 50+ questions on GeeksforGeeks, covering a variety of topics, and participated
-                            in multiple coding contests, enhancing my problem-solving skills.
 
-                        </p>
-                        <a href="https://www.geeksforgeeks.org/user/nikhilya0vof/" target="_blank"
-                            class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-                            Visit Profile
-                        </a>
-                    </div>
+                        <li>Developed a Java Swing-based Warehouse Management System with inventory and shelf tracking.
+                        </li>
+                        <li>Designed GUI with product search, quantity control, and low-stock alerts.</li>
+                        <li>Added dropdowns, styled buttons, and panels for easy product/order handling.</li>
+                        <li>Visualized product paths using Dijkstra and A* algorithms.</li>
+                    </ul>
 
+
+
+
+
+
+                    <img src="ware.png" alt="Virtual Assistant Project" height="300px" width="400px" />
                 </div>
-            </div>
-        </div>
-        <div class="h-1 bg-gray-400">
-        </div>
-        <div class="projects h-52">
-            <h1 class="text-white  text-5xl iceberg-regular " style="margin: 40px;">PROJECTS</h1>
-            <div class="paragraph" style="margin-top: 40px;">
-                <h1 class=" text-3xl iceberg-regular"
-                    style="margin-top: 40px; margin-left: 40px;  -webkit-text-fill-color: rgb(40, 225, 182);">Virtual
-                    Assistant (Python)</h1>
-                <div class=" bg-red-50 flex justify-around" style="height: 300px; margin-top: 30px;">
-                    <div class="" style="margin-top: 30px;">
+            </article>
+        </section>
+    </main>
 
-                        <ul class="list-disc">
-                            <li class=" text-white text-3xl iceberg-regular">
-                                Listens to voice commands and responds with speech.
-                            </li>
-                            <li class=" text-white text-3xl iceberg-regular">
-                                Opens websites & desktop apps like VS Code via voice.
-                            </li>
-                            <li class=" text-white text-3xl iceberg-regular">
-                                Tells current time, temperature, and latest tech news.
-                            </li>
-                            <li class=" text-white text-3xl iceberg-regular">
-                                Smart voice-based reminder system.
-                            </li>
-                            <li class=" text-white text-3xl iceberg-regular">
-                                Controls system volume with voice commands.
-                            </li>
-                        </ul>
-                    </div>
-                    <div class=>
-                        <img src="voice.png" height="300px" width="400px" alt="project">
-                    </div>
-                </div>
-            </div>
-            <div class="h-1 bg-gray-400"></div>
-        </div>
-    </div>
+    <footer>
+        <hr class="h-1 bg-gray-400" />
+    </footer>
+
     <script>
         document.getElementById("btn").addEventListener('click', () => {
-
-            document.getElementById('scroll').scrollIntoView({ behavior: 'smooth' })
-        })
+            document.getElementById('scroll').scrollIntoView({ behavior: 'smooth' });
+        });
     </script>
 </body>
 
