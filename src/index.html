@@ -5,9 +5,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+    <!-- Bootstrap 5 CSS -->
     <link
         href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Iceberg&family=Poppins:wght@800&display=swap"
         rel="stylesheet" />
+
     <style>
         .emblema-one-regular {
             font-family: "Emblema One", system-ui;
@@ -42,7 +44,7 @@
             background-color: rgb(165, 169, 169);
         }
 
-        
+
         .subscribe-button {
             background-color: #e4234da5;
             /* indigo-500 */
@@ -63,6 +65,19 @@
             box-shadow: 0 12px 20px rgba(231, 94, 76, 0.6);
         }
 
+        .click-button {
+
+            cursor: pointer;
+            box-shadow: 0 8px 10px rgba(236, 234, 231, 0.5);
+            /* shadow-indigo-500/50 */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .click-button:hover {
+
+            box-shadow: 0 12px 20px rgba(67, 183, 212, 0.6);
+        }
+
 
         .skill-card {
             opacity: 0;
@@ -80,23 +95,24 @@
 <body class="bg-cover bg-center h-screen w-screen" style="background-image: url(space.jpg);">
     <header style=" background-color: rgba(246, 243, 243, 0.037); padding: 20px;">
         <nav class="flex  gap-8 justify-around bg-white ">
-            <a href="#" class="  link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center"
+            <a href="#" class="  link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center click-button"
                 style="height: 65px; width: 200px;">
                 Home
             </a>
-            <a href="#" class="   link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center"
+            <a href="#" class="   link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center click-button"
                 style="height: 65px; width: 200px;">
                 About
             </a>
-            <a href="#scroll" id="btn" class=" link border-2 p-4 navcolor iceberg-regular text-center "
+            <a href="#scroll" id="btn" class=" link border-2 p-4 navcolor iceberg-regular text-center click-button "
                 style="height: 65px; width: 200px;">
                 Skills
             </a>
-            <a href="#" class="bg-blue-500  link border-2 p-4 font-bold iceberg-regular text-center navcolor"
+            <a href="#"
+                class="bg-blue-500  link border-2 p-4 font-bold iceberg-regular text-center navcolor click-button"
                 style="height:65px; width: 200px;">
                 Contact
             </a>
-            <button class="subscribe-button iceberg-regular"
+            <button class="subscribe-button iceberg-regular" onclick="openResume()"
                 style="width:140px; height: 65px; border: black;">Resume</button>
         </nav>
     </header>
@@ -130,60 +146,93 @@
 
         <hr class="h-1 bg-gray-400 mt-10" />
 
-        <section class="p-9" style="height: 750px;">
+        <section class="p-9" style="height: 450px; ">
             <h2 class="text-white text-5xl iceberg-regular" style="margin: 20px;">PROGRAMMING LANGUAGES</h2>
-            <div class="grid grid-cols-4 gap-8 mt-16">
+            <div class="flex mt-16 justify-around "
+                style=" margin-top: 35px; margin-left: 80px; margin-right: 80px; border-radius: 15px;">
                 <!-- Programming Cards -->
-                <article class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="python.png" alt="Python Logo" class="h-[220px] w-[200px] p-1" />
-                    <h3 class="text-3xl text-center iceberg-regular">Python</h3>
-                </article>
-                <article class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="js.png" alt="JavaScript Logo" class="h-[220px] w-[200px] p-1" />
-                    <h3 class="text-3xl text-center iceberg-regular">JavaScript</h3>
-                </article>
-                <article class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="java.png" alt="Java Logo" class="h-[220px] w-[200px] p-1" />
-                    <h3 class="text-3xl text-center iceberg-regular">Java</h3>
-                </article>
-                <article class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="c.png" alt="C Logo" class="h-[220px] w-[200px] p-1" />
-                    <h3 class="text-3xl text-center iceberg-regular">C</h3>
-                </article>
-                <article class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="cpp.png" alt="C++ Logo" class="h-[220px] w-[200px] p-1" />
-                    <h3 class="text-3xl text-center iceberg-regular">Cpp</h3>
-                </article>
+
+                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
+                    style="height: 150px; width: 150px; border: 2px solid white; margin: 10px; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="python.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+
+                </div>
+                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
+                    style="height: 150px; width: 150px; margin: 10px ;border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="js.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+
+                </div>
+                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
+                    style="height: 150px; width: 150px;margin: 10px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="java.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+
+
+                </div>
+
+
+
+
+                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
+                    style="height: 150px; width: 150px; border: 2px solid white;margin: 10px; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="c.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+
+                </div>
+                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
+                    style="height: 150px; width: 150px; border: 2px solid white; margin: 10px;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="cpp.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+
+                </div>
             </div>
+
+
         </section>
 
         <hr class="h-1 bg-gray-400 mt-[200px]" />
 
         <section class="p-9" id="scroll" style="height: 500px;">
             <h2 class="text-white text-5xl iceberg-regular" style="margin: 30px;">TECHNOLOGIES/FRAMEWORKS</h2>
-            <div class="grid grid-cols-4 gap-8 mt-16">
-                <!-- Technologies -->
-                <!-- Reuse the same <article> block for each technology, similar to programming section -->
-                <!-- I'll list only first few for brevity -->
-                <article class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 270px; width: 250px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="tf.png" alt="TensorFlow Logo" class="h-[220px] w-[200px] p-1" />
-                    <h3 class="text-3xl text-center iceberg-regular">TensorFlow</h3>
-                </article>
-                <!-- Repeat similar articles for NodeJS, SQL, Git... -->
+            <div class="flex mt-16 justify-around "
+                style=" margin-top: 35px; margin-left: 80px; margin-right: 80px; border-radius: 15px;">
+
+
+                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
+                    style="height: 150px; width: 150px; border: 2px solid white; margin: 10px; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="sql.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+
+                </div>
+                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
+                    style="height: 150px; width: 150px; margin: 10px ;border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="git.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+
+                </div>
+                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
+                    style="height: 150px; width: 150px;margin: 10px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="node.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+
+
+                </div>
+
+
+
+
+                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
+                    style="height: 150px; width: 150px; border: 2px solid white;margin: 10px; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="tf.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+
+                </div>
+                <!-- <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
+                    style="height: 150px; width: 150px; border: 2px solid white; margin: 10px;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                    <img src="fastapi.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+
+                </div> -->
             </div>
         </section>
 
         <hr class="h-1 bg-gray-400 mt-[300px]" />
 
         <section class="p-9" style="height: 500px;">
-            <h2 class="text-white text-5xl iceberg-regular">CODING PLATFORMS</h2>
-            <div class="flex justify-around mt-16 skill-card">
+            <h2 class="text-white text-5xl iceberg-regular" style="margin-bottom: 80px;">CODING PLATFORMS</h2>
+            <div class="flex justify-around mt-15 skill-card">
                 <img src="leetcode.png" alt="LeetCode Logo" style="height: 200px; " />
                 <div class="text-white iceberg-regular w-[600px] text-xl p-5">
                     <p>200+ LeetCode problems (Easy/Medium) | Focused on DSA, Arrays, Strings, Recursion | Improving via
@@ -217,10 +266,11 @@
                         <li>Smart voice-based reminder system.</li>
                         <li>Controls system volume with voice commands.</li>
                     </ul>
-                    <img src="voice.png" alt="Virtual Assistant Project" height="300px" width="400px" / class="skill-card">
+                    <img src="voice.png" alt="Virtual Assistant Project" height="300px" width="400px" /
+                        class="skill-card">
                 </div>
             </article>
-            <article >
+            <article>
                 <h3 class="text-3xl iceberg-regular ml-10 text-white">WareHouse Management System</h3>
                 <div class="flex justify-around mt-5 bg-red-50 p-5">
                     <ul class="list-disc text-white text-3xl iceberg-regular">
@@ -232,21 +282,65 @@
                         <li>Added dropdowns, styled buttons, and panels for easy product/order handling.</li>
                         <li>Visualized product paths using Dijkstra and A* algorithms.</li>
                     </ul>
-
-
-
-
-
-
-                    <img src="ware.png" alt="Virtual Assistant Project" height="300px" width="400px" / class="skill-card">
+                    <img src="ware.png" alt="Virtual Assistant Project" height="300px" width="400px" /
+                        class="skill-card">
                 </div>
             </article>
+
+
         </section>
+        <hr class="h-1 bg-gray-400" />
+        <section class="p-9" style="height: 200px;">
+            <h2 class="text-white text-5xl iceberg-regular" style="margin-bottom: 30px;">CERTIFICATES</h2>
+            <ul class="list-disc text-white text-3xl iceberg-regular" style="padding-left: 20px;">
+                <li>
+                    Graphathon 2025 Hackathon - Graphic Era University
+                    <a href="https://drive.google.com/file/d/1aYAPII5U3R7cYEG1Aip75D8_FNhgroeJ/view?usp=drive_link"
+                        target="_blank" style="color: #00eaff; text-decoration: underline;">[View Certificate]</a>
+                </li>
+                <li>
+                    AI for Everyone - DeepLearning.AI (Coursera)
+                    <a href="https://drive.google.com/file/d/1DcyBiGa8YtadeMoeBL3F3YQi5nhUVYLg/view?usp=drive_link"
+                        target="_blank" style="color: #00eaff; text-decoration: underline;">[View Certificate]</a>
+                </li>
+                <li>
+                    SQL Course Completion Certificate (Udemy)
+                    <a href="https://drive.google.com/file/d/1vCm757PfYF2uu0oSxc2JnRCAKBNXosGj/view?usp=drive_link"
+                        target="_blank" style="color: #00eaff; text-decoration: underline;">[View Certificate]</a>
+                </li>
+                <li>
+                    Introduction to GEN AI - GOOGLE (Coursera)
+                    <a href="https://drive.google.com/file/d/1qjhQi22AGz-9fGTFMUumS-cPLKYBItJm/view?usp=drive_link"
+                        target="_blank" style="color: #00eaff; text-decoration: underline;">[View Certificate]</a>
+                </li>
+            </ul>
+        </section>
+        <hr class="h-1 bg-gray-400" style="margin-top: 150px;" />
+
+        <section class="p-9" style="height: 200px;">
+
+        </section>
+
+
+
     </main>
 
-    <footer>
+
+
+
+    <!-- <footer>
         <hr class="h-1 bg-gray-400" />
-    </footer>
+    </footer> -->
+
+
+
+
+
+
+
+
+
+
 
     <script>
         document.getElementById("btn").addEventListener('click', () => {
@@ -269,7 +363,16 @@
         });
 
         skillCards.forEach(card => observer.observe(card));
+
+
+        function openResume() {
+            // Replace this with the actual URL of your resume (PDF or webpage)
+            window.open("https://drive.google.com/file/d/1X9nP600-dWq5oP0_F8zRzXvrljcn_BKh/view?usp=drive_link", "_blank");
+        }
     </script>
+
+
+
 </body>
 
 </html>
