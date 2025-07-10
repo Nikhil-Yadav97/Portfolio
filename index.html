@@ -89,25 +89,41 @@
             opacity: 1;
             transform: scale(1);
         }
+
+        .fixed-box {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #ffcc00;
+            z-index: 1000;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 
 <body class="bg-cover bg-center h-screen w-screen" style="background-image: url(space.jpg);">
     <header style=" background-color: rgba(246, 243, 243, 0.037); padding: 20px;">
         <nav class="flex  gap-8 justify-around bg-white ">
-            <a href="#" class="  link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center click-button"
+            <a href="#coding"
+                class="  link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center click-button"
                 style="height: 65px; width: 200px;">
-                Home
+                Coding Platforms
             </a>
-            <a href="#" class="   link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center click-button"
-                style="height: 65px; width: 200px;">
-                About
-            </a>
-            <a href="#scroll" id="btn" class=" link border-2 p-4 navcolor iceberg-regular text-center click-button "
+            <a href="#skills"
+                class="   link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center click-button"
                 style="height: 65px; width: 200px;">
                 Skills
+
             </a>
-            <a href="#"
+            <a href="#project" id="btn" class=" link border-2 p-4 navcolor iceberg-regular text-center click-button "
+                style="height: 65px; width: 200px;">
+                Projects
+            </a>
+            <a href="#contact"
                 class="bg-blue-500  link border-2 p-4 font-bold iceberg-regular text-center navcolor click-button"
                 style="height:65px; width: 200px;">
                 Contact
@@ -116,10 +132,10 @@
                 style="width:140px; height: 65px; border: black;">Resume</button>
         </nav>
     </header>
-    <hr class="h-1 bg-gray-400 mt-[200px]" />
+    <hr class="h-1 bg-gray-400 mt-[200px]" id="" />
 
     <main>
-        <section class="mt-50 text-center">
+        <section class="mt-50 text-center" id="">
             <h1 class="text-white emblema-one-regular font-medium text-7xl  skill-card"
                 style="text-shadow: 2px 3px 5px rgba(36, 188, 205, 0.603);">
                 NIKHIL YADAV
@@ -146,7 +162,7 @@
 
         <hr class="h-1 bg-gray-400 mt-10" />
 
-        <section class="p-9" style="height: 450px; ">
+        <section class="p-9" style="height: 450px; " id="skills">
             <h2 class="text-white text-5xl iceberg-regular" style="margin: 20px;">PROGRAMMING LANGUAGES</h2>
             <div class="flex mt-16 justify-around "
                 style=" margin-top: 35px; margin-left: 80px; margin-right: 80px; border-radius: 15px;">
@@ -230,7 +246,7 @@
 
         <hr class="h-1 bg-gray-400 mt-[300px]" />
 
-        <section class="p-9" style="height: 500px;">
+        <section class="p-9" style="height: 500px;" id="coding">
             <h2 class="text-white text-5xl iceberg-regular" style="margin-bottom: 80px;">CODING PLATFORMS</h2>
             <div class="flex justify-around mt-15 skill-card">
                 <img src="leetcode.png" alt="LeetCode Logo" style="height: 200px; " />
@@ -254,7 +270,7 @@
 
         <hr class="h-1 bg-gray-400" />
 
-        <section class="projects p-9">
+        <section class="projects p-9" id="project">
             <h2 class="text-white text-5xl iceberg-regular " style="margin-bottom: 20px;">PROJECTS</h2>
             <article>
                 <h3 class="text-3xl iceberg-regular ml-10 text-white">Virtual Assistant (Python)</h3>
@@ -316,10 +332,47 @@
             </ul>
         </section>
         <hr class="h-1 bg-gray-400" style="margin-top: 150px;" />
+        <section class="p-9" id="contact">
+            <h2 class="text-white text-5xl iceberg-regular">CONTACT</h2>
+            <div class=" " style="margin-left:90px; margin-top: 70px;  display: flex; gap: 500px;">
 
-        <section class="p-9" style="height: 200px;">
+
+                <div style="display: flex; align-items: center;" class=" text-white text-3xl iceberg-regular">
+                    <img src="gmail.png" alt="icon" width="40" style="margin-right: 10px;" class="skill-card">
+                    <span>nikhil.yadav.9780@gmail.com</span>
+                </div>
+                <div style="display: flex; align-items: center;" class=" text-white text-3xl iceberg-regular">
+                    <img src="phone.png" alt="icon" width="40" style="margin-right: 10px;" class="skill-card">
+                    <span>+91 | 7906141603</span>
+                </div>
+
+
+            </div>
+
+            <div
+                style="display: flex; gap: 110px; justify-content: center; align-items: center; padding: 20px; margin-top: 80px; ">
+                <a href="https://via.placeholder.com/600" target="_blank">
+                    <img src="x.png" alt="Image 1" style="width: 70; height: 70; cursor: pointer;" class="skill-card">
+                </a>
+
+                <a href="https://www.linkedin.com/in/nikhil-yadav-315163296/" target="_blank">
+                    <img src="in.png" alt="Image 2" style="width: 70px; height: 70px; cursor: pointer;"
+                        class="skill-card">
+                </a>
+
+                <a href="https://github.com/Nikhil-Yadav97" target="_blank">
+                    <img src="hub.png" alt="Image 3" style="width: 70; height: 70; cursor: pointer;" class="skill-card">
+                </a>
+            </div>
+
+
+
+
+
 
         </section>
+
+
 
 
 
@@ -327,10 +380,9 @@
 
 
 
-
-    <!-- <footer>
+    <footer>
         <hr class="h-1 bg-gray-400" />
-    </footer> -->
+    </footer>
 
 
 
@@ -368,6 +420,10 @@
         function openResume() {
             // Replace this with the actual URL of your resume (PDF or webpage)
             window.open("https://drive.google.com/file/d/1X9nP600-dWq5oP0_F8zRzXvrljcn_BKh/view?usp=drive_link", "_blank");
+        }
+
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 
