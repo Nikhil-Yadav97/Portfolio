@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-
     <style>
         .emblema-one-regular {
             font-family: "Emblema One", system-ui;
@@ -25,7 +24,6 @@
 
         .container {
             width: 100%;
-            /* Full width */
             margin: 65px;
         }
 
@@ -35,10 +33,7 @@
             color: white;
             font-weight: 500;
             border-radius: 50px;
-
         }
-
-        /* Green */
 
         .iceberg-regular {
             font-family: "Iceberg", sans-serif;
@@ -47,20 +42,15 @@
         }
 
         .navcolor {
-
             font-size: larger;
             font-weight: 500;
             border-radius: 8px;
-
-
-
         }
 
         .link {
             color: rgb(230, 221, 221);
             transition: color 0.3s ease;
             background-color: black;
-
         }
 
         .link:hover {
@@ -68,10 +58,8 @@
             background-color: rgb(165, 169, 169);
         }
 
-
         .subscribe-button {
             background-color: #e4234da5;
-            /* indigo-500 */
             color: white;
             padding: 10px 20px;
             font-size: 20px;
@@ -79,29 +67,23 @@
             border-radius: 6px;
             cursor: pointer;
             box-shadow: 0 10px 15px rgba(183, 114, 82, 0.5);
-            /* shadow-indigo-500/50 */
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .subscribe-button:hover {
             background-color: #c73232;
-            /* darker indigo on hover */
             box-shadow: 0 12px 20px rgba(231, 94, 76, 0.6);
         }
 
         .click-button {
-
             cursor: pointer;
             box-shadow: 0 8px 10px rgba(236, 234, 231, 0.5);
-            /* shadow-indigo-500/50 */
             transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
 
         .click-button:hover {
-
             box-shadow: 0 12px 20px rgba(67, 183, 212, 0.6);
         }
-
 
         .skill-card {
             opacity: 0;
@@ -114,16 +96,13 @@
             transform: scale(1);
         }
 
-
         .scalecard {
             transition: transform 0.3s ease;
             transform: scale(1);
-            /* default size */
         }
 
         .scalecard:hover {
             transform: scale(1.1);
-            /* grows outward */
         }
 
         html {
@@ -139,19 +118,72 @@
             background: rgba(255, 255, 255, 0.13);
             backdrop-filter: blur(9px);
             -webkit-backdrop-filter: blur(9px);
-            /* Keep same blur in Safari */
             border-radius: 10px;
             z-index: 1000;
-            /* ensures it's above other content */
         }
-
-
 
         body {
             margin: 0px;
             padding: 0px;
             background-image: linear-gradient(111.1deg, rgb(27, 10, 35) -4.8%, rgb(17, 24, 48) 82.7%, rgb(31, 65, 59) 97.2%);
         }
+
+        @media (max-width: 768px) {
+            header.glass-card {
+                flex-direction: column;
+                height: auto;
+                align-items: center;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav button,
+            nav a,
+            .subscribe-button {
+                width: 90% !important;
+                margin-bottom: 10px;
+            }
+
+            .flex {
+                flex-direction: column !important;
+                align-items: center;
+            }
+
+            .container {
+                margin: 20px 0;
+            }
+
+            .text-xl,
+            .text-2xl,
+            .text-3xl,
+            .text-5xl {
+                font-size: 1.25rem !important;
+            }
+
+            .w-[600px] {
+                width: 90% !important;
+            }
+
+            img {
+                height: auto !important;
+                width: 80% !important;
+            }
+
+            section {
+                padding: 10px !important;
+            }
+
+            .p-9 {
+                padding: 1rem !important;
+            }
+
+            .text-center {
+                text-align: center !important;
+            }
+        
     </style>
 </head>
 
