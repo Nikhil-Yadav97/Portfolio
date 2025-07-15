@@ -1,0 +1,101 @@
+.java {
+    width: 65%;
+    background-color: #a56a11;
+  
+    border-radius: 50px;
+    color: white;
+    font-weight: 500;
+}
+.c {
+    width: 75%;
+    background-color: #034f8d;
+    border-radius: 50px;
+    
+    
+    color: white;
+    font-weight: 500;
+}
+
+/* Blue */
+.py {
+    width: 70%;
+    background-color: #139aa7;
+    color: white;
+    font-weight: 500;
+    border-radius: 50px;
+}
+.js {
+    width: 60%;
+    background-color: #139da7;
+    color: white;
+    font-weight: 500;
+    border-radius: 50px;
+}
+
+/* Red */
+.sql {
+    width: 80%;
+    color: white;
+    font-weight: 500;
+    border-radius: 50px;
+    background-color: #12627d;
+}
+.node {
+    width: 60%;
+    color: white;
+    font-weight: 500;
+    border-radius: 50px;
+    background-color: #127d59;
+}
+.tf {
+    width: 50%;
+    color: white;
+    font-weight: 500;
+    border-radius: 50px;
+    background-color: #a05e08;
+}
+.git {
+    width: 60%;
+    color: white;
+    font-weight: 500;
+    border-radius: 50px;
+    background-color: #3b7d12;
+}
+.fast {
+    width: 60%;
+    color: white;
+    font-weight: 500;
+    border-radius: 50px;
+    background-color: #1b7d12;
+}
+.react {
+    width: 60%;
+    color: white;
+    font-weight: 500;
+    border-radius: 50px;
+    background-color: #307d12;
+}
+
+
+/* Dark Grey */
+
+
+/* Dark Grey */
+
+.glass {
+  width: 240px;
+  height: 360px;
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 0px 0px rgba(255, 255, 255, 0);
+  position: relative;
+  overflow: hidden;
+  padding-right: 60px;
+}

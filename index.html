@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Emblema+One&family=Iceberg&family=Poppins:wght@800&display=swap"
         rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
 
     <style>
         .emblema-one-regular {
@@ -17,6 +18,23 @@
             font-style: normal;
         }
 
+        .container {
+            width: 100%;
+            /* Full width */
+            margin: 65px;
+        }
+
+        .html {
+            width: 90%;
+            background-color: #46cf4f;
+            color: white;
+            font-weight: 500;
+            border-radius: 50px;
+
+        }
+
+        /* Green */
+
         .iceberg-regular {
             font-family: "Iceberg", sans-serif;
             font-weight: 400;
@@ -24,10 +42,11 @@
         }
 
         .navcolor {
-            background-color: rgb(209, 209, 210);
+
             font-size: larger;
             font-weight: 500;
-            border-radius: 50px;
+            border-radius: 8px;
+
 
 
         }
@@ -90,60 +109,80 @@
             transform: scale(1);
         }
 
-        .fixed-box {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #ffcc00;
-            z-index: 1000;
-        }
+
 
         html {
             scroll-behavior: smooth;
         }
+
+        .glass-card {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.13);
+            backdrop-filter: blur(9px);
+            -webkit-backdrop-filter: blur(9px);
+            /* Keep same blur in Safari */
+            border-radius: 10px;
+            z-index: 1000;
+            /* ensures it's above other content */
+        }
+
+
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-image: linear-gradient(111.1deg, rgb(8, 23, 35) -4.8%, rgb(16, 23, 32) 82.7%, rgb(12, 23, 11) 97.2%);
+        }
     </style>
 </head>
 
-<body class="bg-cover bg-center h-screen w-screen" style="background-image: url(space.jpg);">
-    <header style=" background-color: rgba(246, 243, 243, 0.037); padding: 20px;">
+<body class="">
+    <header class="glass-card ml-3 mr-3 flex justify-between p-4">
+        <div class="">
+            <h1 class=" text-white iceberg-regular text-center text-3xl " style="margin-top:15px;">Portfolio
+                Website</h1>
+        </div>
         <nav class="flex  gap-8 justify-around bg-white ">
-            <a href="#coding"
-                class="  link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center click-button"
-                style="height: 65px; width: 200px;">
-                Coding Platforms
-            </a>
-            <a href="#skills"
-                class="   link hover:bg-gray-400 border-2 p-4 navcolor iceberg-regular text-center click-button"
-                style="height: 65px; width: 200px;">
+            <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+                class="link hover:bg-gray-400 p-4 navcolor iceberg-regular text-center click-button"
+                style="height: 60px; width: 150px;">
+                Home
+            </button>
+            <a href="#skills" class="   link hover:bg-gray-400 p-4 navcolor iceberg-regular text-center click-button"
+                style="height: 60px; width: 150px;">
                 Skills
 
             </a>
-            <a href="#project" id="btn" class=" link border-2 p-4 navcolor iceberg-regular text-center click-button "
-                style="height: 65px; width: 200px;">
+            <a href="#project" id="btn" class=" link p-4 navcolor iceberg-regular text-center click-button "
+                style="height: 60px; width: 150px;">
                 Projects
             </a>
             <a href="#contact"
-                class="bg-blue-500  link border-2 p-4 font-bold iceberg-regular text-center navcolor click-button"
-                style="height:65px; width: 200px;">
+                class="bg-blue-500  link  p-4 font-bold iceberg-regular text-center navcolor click-button"
+                style="height: 60px; width: 150px;">
                 Contact
             </a>
             <button class="subscribe-button iceberg-regular" onclick="openResume()"
-                style="width:140px; height: 65px; border: black;">Resume</button>
+                style="width:150px; height: 60px; border: black;">Resume</button>
         </nav>
     </header>
-    <hr class="h-1 bg-gray-400 mt-[200px]" id="" />
+
+
 
     <main>
-        <section class="mt-50 text-center" id="">
+        <section class="mt-50 text-center" id="home">
             <h1 class="text-white emblema-one-regular font-medium text-7xl  skill-card"
-                style="text-shadow: 2px 3px 5px rgba(36, 188, 205, 0.603);">
+                style="text-shadow: 2px 3px 5px rgba(36, 188, 205, 0.603); ">
                 NIKHIL YADAV
             </h1>
         </section>
 
         <section class="flex min-h-56 justify-center flex-col p-5 mt-7 text-center text-white text-3xl iceberg-regular"
-            style="height: 400px;">
+            style="height: 523px;">
             <p>I am a curious and driven technology enthusiast</p>
             <p>always eager to explore and innovate. Fascinated by how code shapes the world</p>
             <p>I enjoy solving complex problems. My journey in tech is fueled by a passion for learning,</p>
@@ -153,94 +192,156 @@
         <hr class="h-1 bg-gray-400 mt-[200px]" />
 
         <section class="p-9">
-            <h2 class="text-white text-5xl iceberg-regular">EDUCATION</h2>
-            <p class="text-white text-xl iceberg-regular">BTech CSE(AI & ML) Graphic Era University (Ongoing) [2023-27]
+            <h2 class="text-white text-5xl iceberg-regular " style="margin-left: 10px;">EDUCATION</h2>
+            <p class="text-white text-xl iceberg-regular mt-5" style="margin-left: 12px;">BTech CSE(AI & ML) Graphic Era
+                University (Ongoing) [2023-27]
             </p>
-            <p class="text-white text-xl iceberg-regular">High School and Intermediate Shri Guru Nanak School (CBSE
+            <p class="text-white text-xl iceberg-regular mt-2" style="margin-left: 12px;">High School and Intermediate
+                Shri Guru Nanak School (CBSE
                 Board) [2023]</p>
         </section>
 
         <hr class="h-1 bg-gray-400 mt-10" />
 
-        <section class="p-9" style="height: 450px; " id="skills">
+        <section class="p-9" style="height: 720px; " id="skills">
             <h2 class="text-white text-5xl iceberg-regular" style="margin: 20px;">PROGRAMMING LANGUAGES</h2>
-            <div class="flex mt-16 justify-around "
-                style=" margin-top: 35px; margin-left: 80px; margin-right: 80px; border-radius: 15px;">
-                <!-- Programming Cards -->
+                <div style=" border-radius: 7px; height: fit-content ; width: auto;" class="glass" >
+                <div class="flex" style="height: 200px; padding: auto; margin: 40px;  ">
+                    <div class="container">
+                        <p class="heading text-white text-2xl">CPP</p>
+                        <div class="html">80%</div>
+                    </div>
+                    <div class="text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46); ">
+                        <img src="cpp.png" alt="Python Logo" class="h-[230px] w-[200px] p-1 object-contain "  />
 
-                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 150px; width: 150px; border: 2px solid white; margin: 10px; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="python.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+                    </div>
+                    <div class="container">
+                        <p class="heading text-white text-2xl">C</p>
+                        <div class="skills c">75%</div>
+                    </div>
+                    <div class="text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                        <img src="c.png" alt="Python Logo" class="h-[230px] w-[200px] p-1 object-contain" />
 
+                    </div>
+                    <div class="container">
+                        <p class="heading text-white text-2xl">JAVA</p>
+                        <div class="skills java">65%</div>
+                    </div>
+                    <div class="text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                        <img src="java.png" alt="Python Logo" class="h-[230px] w-[200px] p-1 object-contain" />
+
+                    </div>
+                   
                 </div>
-                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 150px; width: 150px; margin: 10px ;border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="js.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+                <div class="flex" style="height: 200px; padding: auto; margin: 40px;  ">
+                    <div class="container">
+                        <p class="heading text-white text-2xl">JAVASCRIPT</p>
+                        <div class="skills js">60%</div>
+                    </div>
+                    <div class="text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                        <img src="js.png" alt="Python Logo" class="h-[230px] w-[200px] p-1 object-contain" />
 
+                    </div>
+                    <div class="container">
+                        <p class="heading text-white text-2xl">PYTHON</p>
+                        <div class="skills py">70%</div>
+                    </div>
+                    <div class="text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                        <img src="python.png" alt="Python Logo" class="h-[230px] w-[200px] p-1 object-contain" />
+
+                    </div>
+                    <div class="container invisible">
+                        <p class="heading text-white text-2xl">FastAPI</p>
+                        <div class="skills html">60%</div>
+                    </div>
+                    <div class="invisible text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                        <img src="FastAPI.png" alt="Python Logo"/>
+
+                    </div>
+                   
                 </div>
-                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 150px; width: 150px;margin: 10px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="java.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+               
 
 
-                </div>
-
-
-
-
-                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 150px; width: 150px; border: 2px solid white;margin: 10px; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="c.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
-
-                </div>
-                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 150px; width: 150px; border: 2px solid white; margin: 10px;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="cpp.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
-
-                </div>
             </div>
-
-
         </section>
 
         <hr class="h-1 bg-gray-400 mt-[200px]" />
 
-        <section class="p-9" id="scroll" style="height: 500px;">
+        <section class="p-9" id="scroll" style="height: 720px;">
             <h2 class="text-white text-5xl iceberg-regular" style="margin: 30px;">TECHNOLOGIES/FRAMEWORKS</h2>
-            <div class="flex mt-16 justify-around "
-                style=" margin-top: 35px; margin-left: 80px; margin-right: 80px; border-radius: 15px;">
+             <div style=" border-radius: 7px; height: fit-content ; width: auto;" class="glass" >
+                <div class="flex" style="height: 200px; padding: auto; margin: 40px;  ">
+                    <div class="container">
+                        <p class="heading text-white text-2xl">SQL</p>
+                        <div class="sql">80%</div>
+                    </div>
+                    <div class="text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46); ">
+                        <img src="my.png" alt="Python Logo" class="h-[230px] w-[200px] p-1 object-contain "  />
 
+                    </div>
+                    <div class="container">
+                        <p class="heading text-white text-2xl">TENSORFLOW</p>
+                        <div class="skills tf">50%</div>
+                    </div>
+                    <div class="text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                        <img src="TF.png" alt="Python Logo" class="h-[230px] w-[200px] p-1 object-contain" />
 
-                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 150px; width: 150px; border: 2px solid white; margin: 10px; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="sql.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+                    </div>
+                    <div class="container">
+                        <p class="heading text-white text-2xl">GIT</p>
+                        <div class="skills git">60%</div>
+                    </div>
+                    <div class="text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                        <img src="git.png" alt="Python Logo" class="h-[230px] w-[200px] p-1 object-contain" />
 
+                    </div>
+                   
                 </div>
-                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 150px; width: 150px; margin: 10px ;border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="git.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+                <div class="flex" style="height: 200px; padding: auto; margin: 40px;  ">
+                    <div class="container">
+                        <p class="heading text-white text-2xl">REACT</p>
+                        <div class="skills react">60%</div>
+                    </div>
+                    <div class="text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                        <img src="react.png" alt="Python Logo" class="h-[230px] w-[200px] p-1 object-contain" />
 
+                    </div>
+                    <div class="container">
+                        <p class="heading text-white text-2xl">NODE JS</p>
+                        <div class="skills node">60%</div>
+                    </div>
+                    <div class="text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                        <img src="node.png" alt="Python Logo" class="h-[230px] w-[200px] p-1 object-contain" />
+
+                    </div>
+                    <div class="container">
+                        <p class="heading text-white text-2xl">FastAPI</p>
+                        <div class="skills html">60%</div>
+                    </div>
+                    <div class="text-white  rounded-sm items-center skill-card"
+                        style="padding-top: 15px; margin-top: 50px; height: 100px; width: 500px;  box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
+                        <img src="FastAPI.png" alt="Python Logo"/>
+
+                    </div>
+                   
                 </div>
-                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 150px; width: 150px;margin: 10px; border: 2px solid white; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="node.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
+               
+
+                
 
 
-                </div>
-
-
-
-
-                <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 150px; width: 150px; border: 2px solid white;margin: 10px; box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="tf.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
-
-                </div>
-                <!-- <div class="text-white flex flex-col justify-center rounded-sm items-center skill-card"
-                    style="height: 150px; width: 150px; border: 2px solid white; margin: 10px;box-shadow: 10px 10px 20px rgba(2, 205, 237, 0.46);">
-                    <img src="fastapi.png" alt="Python Logo" class="h-[220px] w-[200px] p-1 object-contain" />
-
-                </div> -->
             </div>
         </section>
 
@@ -251,7 +352,9 @@
             <div class="flex justify-around mt-15 skill-card">
                 <img src="leetcode.png" alt="LeetCode Logo" style="height: 200px; " />
                 <div class="text-white iceberg-regular w-[600px] text-xl p-5">
-                    <p>Solved 300+ problems on LeetCode, strengthening core problem-solving and algorithmic thinking across a range of topics. Actively improving through regular participation in biweekly contests.</p>
+                    <p>Solved 300+ problems on LeetCode, strengthening core problem-solving and algorithmic thinking
+                        across a range of topics. Actively improving through regular participation in biweekly contests.
+                    </p>
                     <a href="https://leetcode.com/u/Nikhil_yadav_07/" target="_blank"
                         class="bg-red-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Visit
                         Profile</a>
@@ -360,7 +463,7 @@
                 </a>
 
                 <a href="https://github.com/Nikhil-Yadav97" target="_blank">
-                    <img src="hub.png" alt="Image 3" style="width: 70; height: 70; cursor: pointer;" class="skill-card">
+                    <img src="hub.png" alt="Image 3" style="width: 70; height: 7; cursor: pointer;" class="skill-card">
                 </a>
             </div>
 
@@ -372,9 +475,7 @@
         </section>
 
 
-
-
-
+       
     </main>
 
 
